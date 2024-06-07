@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('strength_distribution') }}">Frequency</a></li>
+        </ul>  
+    </nav>
+  
+    <div class="container">
+        <h1>Password Strength Analyzer</h1>
+        <p class="msg">{{ message }}</p>
+        <div class="col-container">
+            <div class="col">
+                <div class="col-content">
+                    <p>Graph depiction of all passwords and their corresponding strength in a histogram graph.</p>
+                </div>
+                <form action="/strength-distribution" method="GET" class="button-container">
+                    <button type="submit">Check Frequency</button>
+                </form>
+            </div>
+            <!-- <div class="col"> -->
+                <form action="/predict-strength" method="POST" class="col">
+                    <div class="col-content">
+                        <p>Receive a prediction on your password's strength and add it to the list of passwords.</p>
+                        <input required type="password" id="password-input" name="password" placeholder="Enter Password">
+                    </div>
+                    <div class="button-container">
+                        <button type="submit">Assess Strength</button>
+                    </div>
+                </form>
+            <!-- </div> -->
+        </div>
+    </div>
+</body>
+</html>

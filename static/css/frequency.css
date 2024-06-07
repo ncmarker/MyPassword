@@ -1,0 +1,35 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 100px;
+  }
+  
+  .columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .left-column {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+    max-width: 50%;
+  }
+  
+  .right-column {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .right-column img {
+    max-width: 100%;
+  }
+  

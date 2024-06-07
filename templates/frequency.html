@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Frequency</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/frequency.css') }}">
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('strength_distribution') }}">Frequency</a></li>
+    </ul>
+  </nav>
+  
+  <div class="container">
+    <h1>Password Frequency</h1>
+    <div class="columns">
+      <div class="left-column">
+        <p>Here is a histogram of all passwords in the dataset. They range in difficulty, starting at weak (0), to medium (1), and finally to strong (2). The number of passwords within each classification are shown.</p>
+      </div>
+      <div class="right-column">
+        <img src="data:image/png;base64,{{ hist_img_src }}" alt="histogram of frequencies" id="histogram">
+    </div>
+    </div>
+  </div>
+</body>
+</html>

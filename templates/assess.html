@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assess Password</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/assess.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('strength_distribution') }}">Frequency</a></li>
+        </ul>  
+    </nav>
+  
+  <div class="container">
+    <h1>Assess Password</h1>
+    <div class="columns">
+      <div class="left-column">
+        <p>{{ user_message }}</p>
+        <div class="crop">
+          <img src="data:image/png;base64,{{ prediction_img_src }}" alt="diagram of predicted score" id="prediction-graph">
+        </div>
+      </div>
+      <div class="right-column">
+        <form action="/submit-password" method="POST">
+          <input required type="password" id="password-input" name="password" placeholder="Enter Password">
+          <select required id="strength-dropdown" name="strength">
+            <option value="" selected disabled>--strength--</option>
+            <option value="0">0 - weak</option>
+            <option value="1">1 - medium</option>
+            <option value="2">2 - strong</option>
+          </select>
+          <button type="submit">Add to Password List</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

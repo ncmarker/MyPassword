@@ -1,0 +1,79 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 100px;
+  }
+  
+  .columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .left-column {
+    flex: 1;
+    text-align: center;
+    padding-right: 20px;
+    max-width: 50%;
+  }
+
+  .left-column p {
+    margin-bottom: 25px;
+  }
+
+  .crop {
+    height: 100px;
+    width: 550px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  #prediction-graph {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: -85%;
+  }
+  
+  .right-column {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .right-column button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .right-column button:hover {
+    background-color: #0056b3;
+  }
+
+  #password-input {
+    padding: 5px;
+    border-radius: 5px;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  #strength-dropdown {
+    padding: 5px;
+    border-radius: 5px;
+    width: 83%;
+    margin-bottom: 10px;
+  }
+  
